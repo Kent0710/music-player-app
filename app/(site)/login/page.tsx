@@ -1,8 +1,11 @@
 import avatar from "@/public/images/avatar.jpg"
 
 import Image from "next/image";
-import Button from "@/components/Button";
+import Loading from "@/components/Loading";
+import SignInButton from "@/components/SignInButton";
 import { RiMusic2Fill } from 'react-icons/ri'
+
+import { useState } from "react";
 
 const Login = () => {
     return (
@@ -19,7 +22,7 @@ const Login = () => {
                         <RiMusic2Fill size={70}/>
                         <h1 className="text-5xl font-bold tracking-wide"> Music Player App </h1>
                     </div>
-                    <Button label="Get started"/>
+                    <SignInButton />
                 </div>
 
                 <div className="flex flex-col items-center gap-2">

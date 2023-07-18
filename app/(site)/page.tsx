@@ -4,7 +4,15 @@ import Content from "@/components/Content";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
 
-const App = () => {
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+
+const App = async  () => {
+    const session = await getServerSession(authOptions);
+
+    if (!session) redirect(`/login`)
+
     return (
         <Layout>
             <Sidebar />

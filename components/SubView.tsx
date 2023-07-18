@@ -1,9 +1,8 @@
-import Box from "./Box";
 import Gallery from "./Gallery";
+import Box from "./Box";
 import Card from "./Card";
-import View from "./View";
 
-const Main = () => {
+const SubView = () => {
     const songs = [
         {
             songTitle : 'Raining in Manilla. Hindi ka ba nilalamig',
@@ -43,11 +42,26 @@ const Main = () => {
         },
     ]
 
+    const isFullView = false;
+
     return (
-        <main className=" w-full">
-            <View />
-        </main>
+        <div className="w-full">
+            <Box className="bg-">
+                <Gallery title="Recently played" isFullView={isFullView}>
+                    {songs.map((song) => (
+                        <Card key={song.songTitle} {...song} />
+                    ))}
+                </Gallery>
+            </Box>
+            <Box className="bg-">
+                <Gallery title="Favorites" isFullView={isFullView}>
+                    {songs.map((song) => (
+                        <Card key={song.songTitle} {...song} />
+                    ))}
+                </Gallery>
+            </Box>
+        </div>
     )
 };
 
-export default Main;
+export default SubView;

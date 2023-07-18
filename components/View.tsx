@@ -1,9 +1,7 @@
-import Box from "./Box";
-import Gallery from "./Gallery";
-import Card from "./Card";
-import View from "./View";
+import SubView from "./SubView";
+import FullView from "./FullView";
 
-const Main = () => {
+const View = () => {
     const songs = [
         {
             songTitle : 'Raining in Manilla. Hindi ka ba nilalamig',
@@ -43,11 +41,12 @@ const Main = () => {
         },
     ]
 
-    return (
-        <main className=" w-full">
-            <View />
-        </main>
-    )
+    const isFullView = false;
+
+    if (isFullView) 
+        return <FullView viewTitle="Recently played" tracks={songs} />
+
+    return <SubView />
 };
 
-export default Main;
+export default View;

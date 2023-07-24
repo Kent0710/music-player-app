@@ -140,4 +140,11 @@ function filterSearchForTracksResult(tracksItems : SingleTrack[]) {
     return filteredTrackItems;
 }
 
+function removeDuplicatedTracks(tracks : []) {
+    for (let i = 0; i < tracks.length; i++) {
+        let track = tracks[i];
+        
+    }
+}
+
 export default Search;

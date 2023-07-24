@@ -14,7 +14,7 @@ const SignInButton = () => {
         signIn('auth0', { callbackUrl : '/' } );
     }
 
-    if (isSigningIn) return <Loading />
+    if (isSigningIn) return <Loading text='Redirecting to login page...'/>
 
     return (
         <Button 

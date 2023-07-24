@@ -5,15 +5,19 @@ import Image from 'next/image';
 import { AiFillPlayCircle } from 'react-icons/ai'
 
 interface CardProps {
+    id : string
     songTitle : string;
     artist : string;
-    src? : string;
+    image : string;
+    playUrl : string;
 };
 
 const Card : React.FC<CardProps> = ({
+    id,
     songTitle,
     artist,
-    src 
+    image,
+    playUrl
 }) => {
     return (
         <div className='flex flex-col  w-48 bg-gradient-to-b from-neutral-900 to-neutral-700 rounded-lg shrink-0

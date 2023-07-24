@@ -23,12 +23,6 @@ const Sidebar = () => {
             href : '/'
         },
         {
-            icon : BiSearch,
-            label : 'Search',
-            href : '/search',
-            active : pathname === '/search'
-        },
-        {
             icon : MdManageAccounts,
             label : "Account",
             href : '/account',
@@ -51,6 +45,6 @@ const Sidebar = () => {
             </Box>
         </div>
     )
-};
+};  
 
 export default Sidebar;

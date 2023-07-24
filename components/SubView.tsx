@@ -42,22 +42,25 @@ const SubView = () => {
         },
     ]
 
-    const isFullView = false;
+    // is searching
 
+    // is searching done
+
+    const isFullView = false;
     return (
         <div className="w-full">
             <Box className="bg-">
                 <Gallery title="Recently played" isFullView={isFullView}>
-                    {songs.map((song) => (
+                    {/* {songs.map((song) => (
                         <Card key={song.songTitle} {...song} />
-                    ))}
+                    ))} */}
                 </Gallery>
             </Box>
             <Box className="bg-">
                 <Gallery title="Favorites" isFullView={isFullView}>
-                    {songs.map((song) => (
+                    {/* {songs.map((song) => (
                         <Card key={song.songTitle} {...song} />
-                    ))}
+                    ))} */}
                 </Gallery>
             </Box>
         </div>

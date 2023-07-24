@@ -27,7 +27,7 @@ const Gallery : React.FC<GalleryProps> = ({
                 )}
             </div>
 
-            <div className="flex gap-5 ml-5 h-64 w-full shrink-0">
+            <div className="flex flex-wrap gap-5 ml-5 h-fit w-full shrink-0">
                 {children}
             </div>
 

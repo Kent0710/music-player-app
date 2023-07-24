@@ -1,11 +1,5 @@
-import avatar from "@/public/images/avatar.jpg"
-
-import Image from "next/image";
-import Loading from "@/components/Loading";
 import SignInButton from "@/components/SignInButton";
 import { RiMusic2Fill } from 'react-icons/ri'
-
-import { useState } from "react";
 
 const Login = () => {
     return (

@@ -1,0 +1,15 @@
+tracks.tracks.items Array(10) - get all the items
+
+get info on the artist
+	tracks.tracks.items[0].artist[0].name//
+	tracks.tracks.items[0].artist[0].id
+	tracks.tracks.items[0].artist[0].type
+	tracks.tracks.items[0].album.images - arr of three images//
+
+get album / track data
+	tracks.tracks.items[0].external_urls.spotify - playable url//
+	tracks.tracks.items[0].id - id of the song
+	tracks.tracks.items[0].is_playable - if the song is playable
+	tracks.tracks.items[0].name - track / album name//
+	tracks.tracks.items[0].type - if it is a track or an album
+	

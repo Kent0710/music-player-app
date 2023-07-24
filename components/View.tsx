@@ -1,7 +1,17 @@
+'use client'
+
 import SubView from "./SubView";
 import FullView from "./FullView";
+import Searching from "./Searching";
+import Results from "./Results";
+
+import { useIsSearchingContext } from "@/providers/IsSearchingProvider";
+import { useSearchingOkContext } from "@/providers/SearchingOkProvider";
 
 const View = () => {
+    const { isSearching, updateIsSearching } = useIsSearchingContext();
+    const { searchingOk, updateSearchingOk } = useSearchingOkContext();
+
     const songs = [
         {
             songTitle : 'Raining in Manilla. Hindi ka ba nilalamig',
@@ -45,6 +55,12 @@ const View = () => {
 
     if (isFullView) 
         return <FullView viewTitle="Recently played" tracks={songs} />
+
+    if (isSearching) 
+        return <Searching />
+
+    if (searchingOk) 
+        return <Results />
 
     return <SubView />
 };
